@@ -1,0 +1,50 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <div>
+        <label>Valor1</label>
+        <input id="txtValor1" />
+    </div>
+    <div>
+        <label>Valor2</label>
+        <input id="txtValor2" />
+    </div>
+    <div>
+        <label>Resultado</label>
+        <input id="txtResultado" />
+    </div>
+    <button id="btnSomar" onclick="somando()">Somar</button>
+    <button id="btnSubtrair" onclick="calcular('-')">Subtrair</button>
+    <button id="btnDividir" onclick="calcular('/')">Dividir</button>
+    <button id="btnMultiplicar" onclick="calcular('*')">Multiplição</button>
+    <button id="btnElevar" onclick="calcular('**')">Elevar</button>
+</body>
+</html>
+<script>
+
+    function calcular(operacao) {
+        /* console.log(operacao);*/
+        var v1 = document.getElementById("txtValor1").value;
+        var v2 = document.getElementById("txtValor2").value;
+        var resultado = 0;
+        if (operacao == ('+')) {
+            resultado = parseInt(v1) + parseInt(v2);
+        } else if (operacao == ('-')) {
+            resultado = parseInt(v1) - parseInt(v2);
+        } else if (operacao == ('/')) {
+            resultado = parseInt(v1) / parseInt(v2);
+        } else if (operacao == ('*')) {
+            resultado = parseInt(v1) * parseInt(v2);
+        } else if (operacao == ('**')) {
+            resultado = parseInt(v1) ** parseInt(v2);
+        }
+        document.getElementById("txtResultado").value = resultado;
+
+    }
+
+</script>
+
+
+

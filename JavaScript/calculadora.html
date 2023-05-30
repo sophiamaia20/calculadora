@@ -1,0 +1,57 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <div>
+        <label>Valor1</label>
+        <input id="txtValor1" />
+    </div>
+    <div>
+        <label>Valor2</label>
+        <input id="txtValor2" />
+    </div>
+    <div>
+        <label>Resultado</label>
+        <input id="txtResultado" />
+    </div>
+    <button id="btnSomar" onclick="somando()">Somar</button>
+
+    <div><h2>Subtracao</h2></div>
+    <div>
+        <label>Valor3</label>
+        <input id="txtValor3" />
+    </div>
+    <div>
+        <label>Valor4</label>
+        <input id="txtValor4" />
+    </div>
+    <div>
+        <label>Resultado</label>
+        <input id="txtResultadoSubstracao" />
+    </div>
+    <button id="btnSubtrair" onclick="subtrair()">Substrair</button>
+
+</body>
+</html>
+<script>
+    function somando() {
+        var v1 = document.getElementById("txtValor1").value;
+        var v2 = document.getElementById("txtValor2").value;
+        const resultado = parseInt(v1) + parseInt(v2);
+        alert(resultado);
+        document.getElementById("txtResultado").value = resultado;
+    }
+    function subtrair() {
+        var v1 = document.getElementById("txtValor3").value;
+        var v2 = document.getElementById("txtValor4").value;
+        const resultado = parseInt(v1) - parseInt(v2);
+        alert(resultado);
+        document.getElementById("txtResultadoSubtraçao").value = resultado;
+    }
+
+</script>
+
+
+
+
